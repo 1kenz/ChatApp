@@ -1,4 +1,4 @@
-import { authConstanst } from '../actions/constants';
+import { authConstanst } from "../actions/constants"
 
 const initState = {
     firstName: '',
@@ -6,51 +6,53 @@ const initState = {
     email: '',
     authenticating: false,
     authenticated: false,
-    error: null,
-};
+    error: null
+}
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initState, action) => {
+
     console.log(action);
 
-    // eslint-disable-next-line default-case
-    switch (action.type) {
+    switch(action.type){
+
         case `${authConstanst.USER_LOGIN}_REQUEST`:
             state = {
                 ...state,
-                authenticating: true,
-            };
+                authenticating: true
+            }
             break;
         case `${authConstanst.USER_LOGIN}_SUCCESS`:
             state = {
                 ...state,
                 ...action.payload.user,
                 authenticated: true,
-                authenticating: false,
-            };
+                authenticating: false
+            }
             break;
         case `${authConstanst.USER_LOGIN}_FAILURE`:
             state = {
                 ...state,
                 authenticated: false,
                 authenticating: false,
-                error: action.payload.error,
-            };
+                error: action.payload.error
+            }
             break;
         case `${authConstanst.USER_LOGOUT}_REQUEST`:
             break;
         case `${authConstanst.USER_LOGOUT}_SUCCESS`:
             state = {
-                ...initState,
-            };
+                ...initState
+            }
             break;
         case `${authConstanst.USER_LOGOUT}_FAILURE`:
             state = {
                 ...state,
-                error: action.payload.error,
-            };
+                error: action.payload.error
+            }
             break;
+
     }
 
+
     return state;
-};
+}

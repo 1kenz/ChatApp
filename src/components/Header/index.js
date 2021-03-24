@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import './Header.style.css';
+import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../actions';
 
@@ -20,7 +20,7 @@ const Header = (props) => {
     return (
         <header className="header">
             <div style={{ display: 'flex' }}>
-                <div className="logo">Web Messenger</div>
+                <div className="logo">Clarusway Chat</div>
 
                 {!auth.authenticated ? (
                     <ul className="leftMenu">

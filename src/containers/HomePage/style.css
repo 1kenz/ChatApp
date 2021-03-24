@@ -93,6 +93,6 @@
     box-shadow: 0 0 10px 0 #16e316;
 }
 .onlineStatus.off {
-    background: green;
+    background: red;
     box-shadow: 0 0 0 0;
 }

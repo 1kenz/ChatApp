@@ -8,13 +8,14 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: 'AIzaSyA20x5Ij21cOQC9WAnJ46fV7_5LpwEiWMQ',
-    authDomain: 'messenger-3b6b7.firebaseapp.com',
-    projectId: 'messenger-3b6b7',
-    storageBucket: 'messenger-3b6b7.appspot.com',
-    messagingSenderId: '972694073694',
-    appId: '1:972694073694:web:5a71fc2b8bc58769695fcf',
+const firebaseConfig = {
+    apiKey: 'AIzaSyBOnM-bt3sMS2SAkKriPjrbLv_XJlK3XUA',
+    authDomain: 'claruswaychat-e0717.firebaseapp.com',
+    projectId: 'claruswaychat-e0717',
+    storageBucket: 'claruswaychat-e0717.appspot.com',
+    messagingSenderId: '384849413735',
+    appId: '1:384849413735:web:2d0aba3bd27a213b4536c2',
+    // measurementId: "G-VXYE76S2G7"
 };
 
 firebase.initializeApp(firebaseConfig);
