@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import Layout from '../../components/Layout';
 import Card from '../../components/UI/Card';
 import { signin, isLoggedInUser } from '../../actions';
@@ -7,78 +7,86 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 /**
- * @author
- * @function LoginPage
- **/
+* @author
+* @function LoginPage
+**/
 
 const LoginPage = (props) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const dispatch = useDispatch();
-    const auth = useSelector((state) => state.auth);
 
-    // useEffect(() => {
-    //   if(!auth.authenticated){
-    //     dispatch(isLoggedInUser())
-    //   }
-    // }, []);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const auth = useSelector(state => state.auth);
 
-    const userLogin = (e) => {
-        e.preventDefault();
+  // useEffect(() => {
+  //   if(!auth.authenticated){
+  //     dispatch(isLoggedInUser())
+  //   }
+  // }, []);
 
-        if (email == '') {
-            alert('Email is required');
-            return;
-        }
-        if (password == '') {
-            alert('Password is required');
-            return;
-        }
 
-        dispatch(signin({ email, password }));
-    };
 
-    if (auth.authenticated) {
-        return <Redirect to={`/`} />;
+
+  const userLogin = (e) => {
+    e.preventDefault();
+
+    if(email == ""){
+      alert("Email is required");
+      return;
+    }
+    if(password == ""){
+      alert("Password is required");
+      return;
     }
 
-    return (
-        <Layout>
-            <div className="logo-container">
-                <Card>
-                    <img
-                        className="logo"
-                        src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"
-                        alt="clarusway-logo"
-                    />
-                    <h3>Login</h3>
-                    <div className="loginContainer">
-                        <form onSubmit={userLogin}>
-                            <input
-                                name="email"
-                                type="text"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Email"
-                            />
+    dispatch(signin({ email, password }));
+    
 
-                            <input
-                                name="password"
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Password"
-                            />
 
-                            <div>
-                                <button>Login</button>
-                            </div>
-                        </form>
-                    </div>
-                </Card>
+
+
+  }
+
+
+  if(auth.authenticated){
+    return <Redirect to={`/`} />
+  }
+
+
+
+  return(
+    <Layout>
+      <div className="loginContainer">
+        <Card>
+          <form onSubmit={userLogin}>
+            
+            <input 
+              name="email"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+            />
+
+            <input 
+              name="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+
+
+            <div>
+              <button>Login</button>
             </div>
-        </Layout>
-    );
-};
 
-export default LoginPage;
+          </form>
+        </Card>
+      </div>
+    </Layout>
+   )
+
+ }
+
+export default LoginPage

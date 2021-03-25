@@ -4,7 +4,6 @@ import Card from '../../components/UI/Card';
 import { signup } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import './style.css';
 
 /**
  * @author
@@ -38,54 +37,47 @@ const RegisterPage = (props) => {
 
     return (
         <Layout>
-            <div className="logo-container">
+            <div className="registerContainer">
                 <Card>
-                    <img
-                        className="logo"
-                        src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"
-                        alt="clarusway-logo"
-                    />
-                    <div className="registerContainer">
-                        <form onSubmit={registerUser}>
-                            <h3>Sign up</h3>
+                    <form onSubmit={registerUser}>
+                        <h3>Sign up</h3>
 
-                            <input
-                                name="firstName"
-                                type="text"
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)}
-                                placeholder="First Name"
-                            />
+                        <input
+                            name="firstName"
+                            type="text"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
+                            placeholder="First Name"
+                        />
 
-                            <input
-                                name="lastName"
-                                type="text"
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)}
-                                placeholder="Last Name"
-                            />
+                        <input
+                            name="lastName"
+                            type="text"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                            placeholder="Last Name"
+                        />
 
-                            <input
-                                name="email"
-                                type="text"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Email"
-                            />
+                        <input
+                            name="email"
+                            type="text"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Email"
+                        />
 
-                            <input
-                                name="password"
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Password"
-                            />
+                        <input
+                            name="password"
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                        />
 
-                            <div>
-                                <button>Sign up</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div>
+                            <button>Sign up</button>
+                        </div>
+                    </form>
                 </Card>
             </div>
         </Layout>

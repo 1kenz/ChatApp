@@ -20,18 +20,17 @@ const Header = (props) => {
     return (
         <header className="header">
             <div style={{ display: 'flex' }}>
-                <div className="logo">ClarusChat</div>
+                <div className="logo">Clarusway Chat</div>
+
                 {!auth.authenticated ? (
-                    <div className="leftMenu">
-                        <ul className="leftMenu1">
-                            <li>
-                                <NavLink to={'/login'}>Login</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to={'/signup'}>Sign up</NavLink>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul className="leftMenu">
+                        <li>
+                            <NavLink to={'/login'}>Login</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/signup'}>Sign up</NavLink>
+                        </li>
+                    </ul>
                 ) : null}
             </div>
             <div

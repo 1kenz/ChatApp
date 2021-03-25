@@ -3,14 +3,12 @@
     position: relative;
     height: 60px;
     display: flex;
-    /* justify-content: space-around; */
     background: #7b4b8f;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
 .logo {
-    /* width: 500px; */
     font-size: 20px;
     color: #fff;
     text-transform: capitalize;
@@ -30,28 +28,21 @@
     text-shadow: 0 0;
     text-decoration: none;
 }
+
 .leftMenu {
     display: flex;
-    margin-left: 100px;
-    align-items: center;
-    justify-items: flex-end;
-}
-
-.leftMenu1 {
-    display: flex;
-    align-content: flex-end;
-    /* flex-shrink: 2; */
     color: #fff;
+    margin: 20px;
 }
 
-.leftMenu1 > li {
+.leftMenu > li {
     margin: 0 10px;
 }
 
-.leftMenu1 > li > a {
+.leftMenu > li > a {
     color: #fff;
 }
 
-.leftMenu1 > li > a.active {
+.leftMenu > li > a.active {
     font-weight: bold;
 }

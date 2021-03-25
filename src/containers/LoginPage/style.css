@@ -1,18 +1,5 @@
-.loginContainer,
-.registerContainer {
+.loginContainer, .registerContainer{
     width: 400px;
     position: relative;
     margin: 50px auto;
-}
-.logo-container {
-    padding: 1rem;
-}
-.logo {
-    align-self: center;
-    width: 10%;
-    height: auto;
-}
-h3 {
-    text-align: center;
-    padding: 1em;
 }
