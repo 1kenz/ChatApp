@@ -20,7 +20,7 @@ const Header = (props) => {
     return (
         <header className="header">
             <div style={{ display: 'flex' }}>
-                <div className="logo">Clarusway Chat</div>
+                <div className="logo">ClarusChat</div>
 
                 {!auth.authenticated ? (
                     <ul className="leftMenu">

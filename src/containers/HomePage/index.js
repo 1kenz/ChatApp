@@ -15,7 +15,6 @@ const User = (props) => {
         <div onClick={() => onClick(user)} className="displayName">
             <div className="displayPic">
                 <img
-                    style={{ alignItems: 'center', justifyContent: 'center' }}
                     src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"
                     alt="claruschat"
                 />

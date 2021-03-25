@@ -1,5 +1,16 @@
-.loginContainer, .registerContainer{
+.loginContainer,
+.registerContainer {
     width: 400px;
     position: relative;
     margin: 50px auto;
+}
+.cardContainer {
+    justify-items: center;
+    align-self: center;
+    margin: 10 auto;
+}
+.login-text {
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
 }
