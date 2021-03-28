@@ -55,7 +55,7 @@ const LoginPage = (props) => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
                         />
-
+                        <br/>
                         <input
                             name="password"
                             type="password"
@@ -63,7 +63,7 @@ const LoginPage = (props) => {
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="Password"
                         />
-
+                        <br/>
                         <div>
                             <button>Login</button>
                         </div>

@@ -49,7 +49,7 @@ const RegisterPage = (props) => {
                             onChange={(e) => setFirstName(e.target.value)}
                             placeholder="First Name"
                         />
-
+                        <br />
                         <input
                             name="lastName"
                             type="text"
@@ -57,7 +57,7 @@ const RegisterPage = (props) => {
                             onChange={(e) => setLastName(e.target.value)}
                             placeholder="Last Name"
                         />
-
+                        <br />
                         <input
                             name="email"
                             type="text"
@@ -65,7 +65,7 @@ const RegisterPage = (props) => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
                         />
-
+                        <br />
                         <input
                             name="password"
                             type="password"
